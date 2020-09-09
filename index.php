@@ -1,13 +1,13 @@
 <?php
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
-    include('jobs.php');
+
+    require_once('jobs.php');
     $name = 'Ricardo Cuéllar';
     $limitMonths = 200;
     
-
-
-
- 
 
 ?> 
 <!doctype html>
@@ -34,7 +34,7 @@
       </div>
       <div class="col">
         <h1><?php echo $name?></h1>
-        <h2><?php echo $jobs[0]?></h2>
+        <h2><?php echo "PHP Developer"//$jobs[0]?></h2>
         <ul>
           <li>Mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="78101d1b0c170a3815191114561b1715">[email&#160;protected]</a></li>
           <li>Phone: 1234567890</li>
@@ -59,8 +59,8 @@
           <ul>
             
             <?php
-                foreach($jobs as $key => $value){
-                    print_josb($value);   
+                foreach($jobs as $value){
+                    print_element($value);   
                 } //Enf foreach
             ?>        
             
@@ -68,20 +68,14 @@
         </div>
         <div>
             <h3 class="border-bottom-gray">Projects</h3>
-            <div class="project">
-                <h5>Project X</h5>
-                <div class="row">
-                    <div class="col-3">
-                        <img id="profile-picture" src="https://ui-avatars.com/api/?name=John+Doe&size=255" alt="">
-                      </div>
-                      <div class="col">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum corporis at accusamus quisquam hic quos vel? Tenetur, ullam veniam consequatur esse quod cum, quam cupiditate assumenda natus maiores aperiam.</p>
-                        <strong>Technologies used:</strong>
-                        <span class="badge badge-secondary">PHP</span>
-                        <span class="badge badge-secondary">HTML</span>
-                        <span class="badge badge-secondary">CSS</span>
-                      </div>
-                </div>
+            <div class="project">   
+            <ul>
+                <?php
+                foreach($projects as $value){
+                    print_element($value);   
+                } //Enf foreach
+              ?>  
+            </ul>
             </div>
             <div class="project">
                 <h5>Project X</h5>
