@@ -3,7 +3,6 @@
 namespace App\Models;
 
 
-require_once 'Printable.php';
 
 
 
@@ -40,7 +39,7 @@ class BaseElement implements Printable{
         $years = floor($this->months / 12);
         $months_left = $this->months%12;
         if($years == 0){
-            return "$months months";
+            return "$this->months months";
         }else if($months_left != 0){
             return "$years years, $months_left months";
         }else{

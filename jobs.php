@@ -1,11 +1,6 @@
 <?php
 
-
-require_once 'app/Models/Printable.php'; 
-require 'app/Models/job.php';
-require 'app/Models/Project.php';   
-require 'lib1/Project.php';
-
+require_once 'vendor/autoload.php';
 use App\Models\{Job,Project,Printable};
 //use App\Models\Project;
 
@@ -20,8 +15,9 @@ $job3 = new Job('Python','Desarrollador con especialidad en Flask y Django');
 $job3->months = 14;
 
 $project1 = new Project('Project 1', 'Este fue un proyecto personal');  
+$project1->months = 1;
 
-$projectLib = new Lib1\Project();
+//$projectLib = new Lib1\Project();
 
 $jobs = [
     $job1,

@@ -3,8 +3,6 @@
 namespace App\Models;
 
 
-//Requiere once nos asegura que solo se dispara una vez
-require_once 'BaseElement.php';
 
 class Job extends BaseElement{
 
